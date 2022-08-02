@@ -1,0 +1,6 @@
+org\jbpm\spring\boot\ProcessInstanceController.class
+org\jbpm\spring\SpringSecurityIdentityProvider.class
+org\jbpm\spring\boot\ProcessDefController.class
+org\jbpm\spring\boot\Application.class
+org\jbpm\spring\boot\UserTaskController.class
+org\jbpm\spring\boot\DeployController.class

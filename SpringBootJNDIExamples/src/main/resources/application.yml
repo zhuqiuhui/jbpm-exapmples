@@ -1,0 +1,47 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /spring
+      
+spring:
+  profiles:
+    active: dev 
+  application:
+    name: jndi
+  datasource:
+   url: jdbc:mysql://localhost:3306/jbpm?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=Asia/Chongqing
+   driver-class-name: com.mysql.cj.jdbc.Driver   
+   username: root
+   password: 123456
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show_sql: true
+        hbm2ddl:
+           auto: update
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      entity-scan-packages: com.zqh.jndi.domain
+
+
+
+
+logging:
+  file: logs/application-debug.log 
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    org.springframework.web: INFO
+    root: INFO
+    sql: INFO
+    web: INFO
+    com:
+      arjuna:
+           ats:
+             jdbc: ERROR
+  
+  
+
+     
